@@ -1,5 +1,65 @@
+// reset
+body {
+  padding: 0;
+  margin: 0;
+}
+// variable
+@elon: #1d232a;
+@ct-frame: #ddd;
 
 .function-white(@alpha) {
   return: rgba(255, 255, 255, @alpha);
 }
+.function-black(@alpha) {
+  return: rgba(0, 0, 0, @alpha);
+}
 
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  background-image: linear-gradient(to top, darken(@elon, 10%) 30%, black 50%);
+}
+
+#cybertruck {
+  width: 650px;
+  height: 210px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(161deg, transparent 11%, @elon 11.5%),
+    linear-gradient(161deg, transparent 50%, #555 50%),
+    linear-gradient(to right, @elon, @elon),
+    radial-gradient(circle at center, yellow 8%, red 30%, transparent),
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 0, 0, 0.6) 30%,
+      rgba(255, 0, 0, 0.6) 70%,
+      transparent
+    ),
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 0, 0, 0.6) 30%,
+      rgba(255, 0, 0, 0.6) 70%
+    ),
+    radial-gradient(
+      circle at center bottom,
+      transparent 45%,
+      white(0.1) 45%,
+      white(0.1) 50%,
+      transparent 50%
+    ),
+    linear-gradient(to right, white(0.1), white(0.1)),
+    linear-gradient(
+      40deg,
+      transparent 40%,
+      white(0.1) 41%,
+      white(0.1) 44%,
+      transparent 45%
+    );
+}

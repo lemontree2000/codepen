@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>guide</title>
+    <style>
+        /* 原帖：https: //segmentfault.com/a/1190000021507641#item-1-1 */
+        /*
+            主要利用linear-gradient 进行线的渲染， 百分百来用控制线的粗细
+            to right 和 to bottom 会造成左边和上边少一条边，所以to left 和 to top 都要来一下
+            利用repeat 属性进行平铺, repeat对应background-image的属性可以写四个，所以to left 只需要repeat-x ，to bottom 只需要 reapeat-y
+        
+        */
+        body {
+            padding: 0;
+            margin: 0;
+            background: #ddd;
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .guide {
+            position: absolute;
+            font-size: 50px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 6em;
+            height: 4em;
+            background-color: teal;
+            background-repeat: repeat, repeat, repeat-x, repeat-y;
+            background-image: linear-gradient(to bottom, transparent 95%, white 95%),
+                linear-gradient(to right, transparent 95%, white 95%),
+                linear-gradient(to top, transparent 95%, white 95%),
+                linear-gradient(to left, transparent 95%, white 95%);
+            background-size: 1em 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="guide"></div>
+</body>
+
+</html>

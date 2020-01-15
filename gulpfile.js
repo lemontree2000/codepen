@@ -6,6 +6,7 @@ const ghPage = require("gh-pages");
 const gls = require("gulp-live-server");
 const LessFunctionPlugin = require("less-plugin-functions");
 const lessFn = new LessFunctionPlugin();
+const prePublish = require("./build/prepublish.gulpfile");
 /**
  * 处理js文件
  */
@@ -17,9 +18,11 @@ function javascriptTask() {
  */
 function lessTask() {
   return src("./src/style/*.less")
-    .pipe(less({
-      plugins: [lessFn]
-    }))
+    .pipe(
+      less({
+        plugins: [lessFn]
+      })
+    )
     .pipe(dest("./dist/style/"));
 }
 
@@ -74,3 +77,5 @@ exports.build = series(clean, javascriptTask, lessTask, htmlTask, imageTask);
 exports.dev = devTask;
 
 exports.publish = publishPage;
+
+exports.prePublish = prePublish;

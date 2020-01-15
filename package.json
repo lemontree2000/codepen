@@ -29,6 +29,8 @@
     "less-plugin-functions": "^1.0.0"
   },
   "dependencies": {
-    "gulp-live-server": "0.0.31"
+    "fs-extra": "^8.1.0",
+    "gulp-live-server": "0.0.31",
+    "htmlparser2": "^4.0.0",
   }
 }

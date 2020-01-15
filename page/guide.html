@@ -7,13 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>guide</title>
     <style>
-        /* 原帖：https: //segmentfault.com/a/1190000021507641#item-1-1 */
-        /*
-            主要利用linear-gradient 进行线的渲染， 百分百来用控制线的粗细
-            to right 和 to bottom 会造成左边和上边少一条边，所以to left 和 to top 都要来一下
-            利用repeat 属性进行平铺, repeat对应background-image的属性可以写四个，所以to left 只需要repeat-x ，to bottom 只需要 reapeat-y
-        
-        */
         body {
             padding: 0;
             margin: 0;
@@ -41,7 +34,14 @@
         }
     </style>
 </head>
-
+<!-- 
+    lang: html,css
+    date: 2020/1/14
+    本例原帖：https://segmentfault.com/a/1190000021507641#item-1-1
+    总结：主要利用linear-gradient 进行线的渲染， 百分百来用控制线的粗细
+    to right 和 to bottom 会造成左边和上边少一条边，所以to left 和 to top 都要来一下
+    利用repeat 属性进行平铺, repeat对应background-image的属性可以写四个，所以to left 只需要repeat-x ，to bottom 只需要 reapeat-y
+ -->
 <body>
     <div class="guide"></div>
 </body>

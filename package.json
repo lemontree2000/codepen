@@ -32,5 +32,6 @@
     "fs-extra": "^8.1.0",
     "gulp-live-server": "0.0.31",
     "htmlparser2": "^4.0.0",
+    "puppeteer": "^2.0.0"
   }
 }

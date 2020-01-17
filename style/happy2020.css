@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkred;
+}
+body figure {
+  display: grid;
+  font-size: 60px;
+  color: whitesmoke;
+  grid-template-columns: repeat(8, 1em);
+  grid-template-rows: repeat(3, 1em);
+}
